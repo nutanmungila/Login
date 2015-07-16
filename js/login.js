@@ -1,21 +1,19 @@
 import React from 'react';
 
 class Login extends React.Component{
-    constructor(props) {
-        super(props);
-        this.onbtnClickhandler = this.onbtnClickhandler.bind(this);
-		}
-
-	onbtnClickhandler(e){
-			var username = React.findDOMNode(this.refs.uname).value;
-			var password = React.findDOMNode(this.refs.pass).value;
-			React.findDOMNode(this.refs.uname).value = "";
-			React.findDOMNode(this.refs.pass).value = "";
-			this.props.onLogIn(username,password);
-		}	
+    	constructor(props) {
+	        super(props);
+	        this.onbtnClickhandler = this.onbtnClickhandler.bind(this);
+	}
+   	onbtnClickhandler(e){
+		var username = React.findDOMNode(this.refs.uname).value;
+		var password = React.findDOMNode(this.refs.pass).value;
+		React.findDOMNode(this.refs.uname).value = "";
+		React.findDOMNode(this.refs.pass).value = "";
+		this.props.onLogIn(username,password);
+	}	
 
 	render(){
-
 		return(
 			<div>
 			   <div className="outer">
@@ -28,7 +26,7 @@ class Login extends React.Component{
 					</div>
 			   </div>	
 			</div>
-			);
+		     );
 	}
 
 }
